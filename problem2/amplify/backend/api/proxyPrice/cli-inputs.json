@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/api/prices": {
+      "name": "/api/prices",
+      "lambdaFunction": "proxy",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

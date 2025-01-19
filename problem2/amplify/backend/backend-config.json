@@ -1,0 +1,43 @@
+{
+  "api": {
+    "proxyPrice": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "proxy"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "proxy": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_proxy_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "proxy"
+        }
+      ]
+    },
+    "AMPLIFY_function_proxy_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "proxy"
+        }
+      ]
+    }
+  }
+}

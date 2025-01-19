@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-problem2-dev-2c571-authRole",
+      "UnauthRoleArn": "arn:aws:iam::008018250377:role/amplify-problem2-dev-2c571-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::008018250377:role/amplify-problem2-dev-2c571-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-problem2-dev-2c571-deployment",
+      "UnauthRoleName": "amplify-problem2-dev-2c571-unauthRole",
+      "StackName": "amplify-problem2-dev-2c571",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:008018250377:stack/amplify-problem2-dev-2c571/963bcb3a-b870-462c-aa35-f0bb997b8f74",
+      "AmplifyAppId": "dx2kfhlu3nxnd"
+    },
+    "categories": {
+      "function": {
+        "proxy": {
+          "deploymentBucketName": "amplify-problem2-dev-2c571-deployment",
+          "s3Key": "amplify-builds/proxy-676976364b49546b7155-build.zip"
+        }
+      },
+      "api": {
+        "proxyPrice": {}
+      }
+    }
+  }
+}
