@@ -24,19 +24,14 @@ interface FancyFormProps {
 }
 
 const FancyForm = ({ form, handleSubmit, coinPricesInfo, loading }: FancyFormProps) => {
-  const [watchSelectedCurrency, watchTransferAmount, watchExchangedAmount] = form.watch(['currency', 'transferAmount', 'exchangedAmount']);
+  const [watchSelectedCurrency, watchTransferAmount] = form.watch(['currency', 'transferAmount']);
 
   useEffect(() => {
     const coinInfo = coinPricesInfo?.find(coinPrice => coinPrice.currency === watchSelectedCurrency);
     if (coinInfo) {
-      console.log(String(Number(watchTransferAmount) / coinInfo.price));
       form.setValue('exchangedAmount', String(Number(watchTransferAmount) / coinInfo.price));
     }
   }, [coinPricesInfo, form, watchSelectedCurrency, watchTransferAmount]);
-
-  useEffect(() => {
-    console.log('this: ', watchExchangedAmount);
-  }, [watchExchangedAmount]);
 
   return (
     <Form {...form} >
