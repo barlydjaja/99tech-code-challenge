@@ -187,10 +187,10 @@ const Walkthrough = ({ steps = walkhroughSteps, onComplete, onVisibleChange, ini
             style={{
               ...(highlightPosition && cardPosition === 'below' ? {
                 top: highlightPosition.top + highlightPosition.height + 20,
-                left: highlightPosition.left + (highlightPosition.width / 2) - 160,
+                left: Math.max(highlightPosition.left + (highlightPosition.width / 2) - 160, 16),
               } : highlightPosition && cardPosition === 'above' ? {
                 top: highlightPosition.top - 200,
-                left: highlightPosition.left + (highlightPosition.width / 2) - 160,
+                left: Math.max(highlightPosition.left + (highlightPosition.width / 2) - 160, 16),
               } : {})
             }}
           >
